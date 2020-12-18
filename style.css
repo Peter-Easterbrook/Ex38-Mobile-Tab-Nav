@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  margin: 0;
+  background: rgb(216, 228, 250);
+  background: linear-gradient(
+    0deg,
+    rgba(216, 228, 250, 1) 0%,
+    rgba(146, 178, 242, 1) 100%
+  );
+}
+.phone {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #eee;
+  border-radius: 15px;
+  height: 600px;
+  width: 340px;
+  box-shadow: 0 1.1px 2.2px rgba(0, 0, 0, 0.02),
+    0 2.7px 5.3px rgba(0, 0, 0, 0.028), 0 5px 10px rgba(0, 0, 0, 0.035),
+    0 8.9px 17.9px rgba(0, 0, 0, 0.042), 0 16.7px 33.4px rgba(0, 0, 0, 0.05),
+    0 40px 80px rgba(0, 0, 0, 0.07);
+}
+.phone .content {
+  opacity: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% - 60px);
+  width: 100%;
+  transition: opacity 0.4s ease;
+}
+.phone .content.show {
+  opacity: 1;
+}
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-top: -5px;
+  width: 100%;
+}
+
+nav ul {
+  background-color: #fff;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+}
+
+nav li {
+  color: #777;
+  cursor: pointer;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li p {
+  font-size: 12px;
+  margin: 2px 0;
+}
+
+nav ul li:hover,
+nav ul li.active {
+  color: #709ced;
+}
